@@ -1,7 +1,7 @@
 #include <bits/stdc++.h> 
 void setZeros(vector<vector<int>> &matrix)
 {
-	int r = matrix.size();
+    int r = matrix.size();
     int c = matrix[0].size();
     
     vector<int> dummyRow(r, -1);
