@@ -12,9 +12,9 @@ int uniqueSubstrings(string input)
                 l++;
             }
         }
-        r++;
-        len = r - l;
+        len = r - l + 1;
         best = max(best, len);
+        r++;
     }
     
     return best;
