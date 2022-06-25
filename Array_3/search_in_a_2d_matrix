@@ -1,0 +1,16 @@
+#include <bits/stdc++.h> 
+#include <vector>
+
+bool findTargetInMatrix(vector < vector < int >> & mat, int m, int n, int target) {
+    
+    int i;
+    for(i = 1; i < m; i++) {
+        if(target >= mat[i-1][0] && target < mat[i][0]) {
+            if(find(mat[i-1].begin(), mat[i-1].end(), target) != mat[i-1].end()) return true;
+        }
+    }
+    i--;
+    if(find(mat[i].begin(), mat[i].end(), target) != mat[i].end()) return true;
+    
+    return false;
+}
